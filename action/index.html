@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <link rel="icon" href="/images/androidreset.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/applereset.png" />
+    <script>
+        (function() {
+            const noop = () => {};
+            console.log = noop; console.warn = noop;
+            console.error = noop; console.info = noop; console.debug = noop;
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AA Hub action</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="action.css"/>
+</head>
+<body>
+
+    <div class="card">
+
+        <div class="logo-wrap">
+            <div class="logo-text">AA HUB</div>
+        </div>
+
+        <div id="state-loading" class="state active">
+            <div class="divider" style="margin-top:0;"></div>
+            <div class="spinner-wrap">
+                <div class="spinner"></div>
+                <p id="loading-text" style="font-size:0.88rem;color:#6B7280;"></p>
+            </div>
+        </div>
+
+        <div id="state-reset" class="state">
+            <div class="divider" style="margin-top:0;"></div>
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="section-title" id="reset-title"></div>
+                    <div class="section-sub" id="reset-subtitle"></div>
+                </div>
+            </div>
+            <div class="input-wrap">
+                <label class="input-label" id="label-new"></label>
+                <input type="password" id="new-password" class="input-style" oninput="checkStrength(this.value)"/>
+                <div class="strength-bar">
+                    <div class="strength-fill" id="strength-fill"></div>
+                </div>
+                <p class="strength-label" id="strength-label"></p>
+            </div>
+            <div class="input-wrap" style="margin-bottom:20px;">
+                <label class="input-label" id="label-confirm"></label>
+                <input type="password" id="confirm-password" class="input-style"/>
+                <p id="match-label"></p>
+            </div>
+            <button class="btn-primary" id="reset-btn" onclick="doReset()"></button>
+        </div>
+
+        <div id="state-success" class="state" style="text-align:center;padding:8px 0;">
+            <div class="divider" style="margin-top:0;"></div>
+            <div class="status-icon success">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6L9 17l-5-5"/>
+                </svg>
+            </div>
+            <div class="status-title" id="success-title"></div>
+            <div class="status-msg" id="success-msg"></div>
+            <button class="btn-primary" id="success-btn" onclick="window.location.href='https://aa-hub.netlify.app'"></button>
+        </div>
+
+        <div id="state-error" class="state" style="text-align:center;padding:8px 0;">
+            <div class="divider" style="margin-top:0;"></div>
+            <div class="status-icon error">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F87171" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+            </div>
+            <div class="status-title" id="error-title" style="color:#F87171;"></div>
+            <div class="status-msg" id="error-msg"></div>
+            <button class="btn-secondary" id="error-btn" onclick="window.location.href='https://aa-hub.netlify.app'"></button>
+        </div>
+
+    </div>
+
+    <div class="footer">AA Hub © NebulaSpectra Studio</div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="action.js"></script>
+
+</body>
+</html>

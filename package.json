@@ -1,0 +1,19 @@
+{
+  "name": "aa-hub",
+  "version": "1.0.0",
+  "description": "AA Hub Social App",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Web app ready'"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/camera": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/filesystem": "^6.0.0",
+    "@capacitor/local-notifications": "^6.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0"
+  }
+}
