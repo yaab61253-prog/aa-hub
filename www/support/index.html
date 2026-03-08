@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Hub support</title>
+<meta name="description" content="الدعم التقني لتطبيق AA Hub — حلول سريعة لمشاكلك.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aa-hub.netlify.app/support/">
+<link rel="icon" href="/images/android-icon.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon.png" />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="support.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="back-btn"><i data-lucide="arrow-right" style="width:18px;height:18px;"></i></a>
+  <span class="hdr-title" id="hdr-title"></span>
+</header>
+<div class="hero">
+  <h1 id="hero-h1"></h1>
+  <p id="hero-p"></p>
+</div>
+<div class="content">
+  <div class="section-title" id="quick-title"></div>
+  <a href="/contact" class="quick-card">
+    <div class="q-icon"><i data-lucide="message-circle" style="width:20px;height:20px;"></i></div>
+    <div><div class="q-title" id="contact-card-title"></div><div class="q-sub" id="contact-card-sub"></div></div>
+  </a>
+  <a href="mailto:nebulaspectrastudio@gmail.com" target="_blank" class="quick-card">
+    <div class="q-icon"><i data-lucide="mail" style="width:20px;height:20px;"></i></div>
+    <div><div class="q-title" id="email-card-title"></div><div class="q-sub">nebulaspectrastudio@gmail.com</div></div>
+  </a>
+  <div class="section-title" id="faq-title"></div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+      <span class="faq-q-text" id="faq1-q"></span>
+      <i data-lucide="chevron-down" class="faq-icon" style="width:18px;height:18px;"></i>
+    </div>
+    <div class="faq-a"><span id="faq1-a"></span><div class="tip" id="faq1-tip"></div></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+      <span class="faq-q-text" id="faq2-q"></span>
+      <i data-lucide="chevron-down" class="faq-icon" style="width:18px;height:18px;"></i>
+    </div>
+    <div class="faq-a"><span id="faq2-a"></span></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+      <span class="faq-q-text" id="faq3-q"></span>
+      <i data-lucide="chevron-down" class="faq-icon" style="width:18px;height:18px;"></i>
+    </div>
+    <div class="faq-a"><span id="faq3-a"></span><div class="warn" id="faq3-warn"></div></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+      <span class="faq-q-text" id="faq4-q"></span>
+      <i data-lucide="chevron-down" class="faq-icon" style="width:18px;height:18px;"></i>
+    </div>
+    <div class="faq-a"><span id="faq4-a"></span><div class="tip" id="faq4-tip"></div></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+      <span class="faq-q-text" id="faq5-q"></span>
+      <i data-lucide="chevron-down" class="faq-icon" style="width:18px;height:18px;"></i>
+    </div>
+    <div class="faq-a"><span id="faq5-a"></span><div class="tip" id="faq5-tip"></div></div>
+  </div>
+</div>
+<footer class="pg-footer">AA Hub © 2026 NebulaSpectra Studio · <a href="/privacy" id="footer-privacy"></a> · <a href="/terms" id="footer-terms"></a></footer>
+<script src="support.js" defer></script>
+</body>
+</html>
