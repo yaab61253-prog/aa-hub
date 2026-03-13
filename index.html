@@ -1,50 +1,927 @@
-<!DOCTYPE html>
-<html dir="rtl" lang="ar">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AA Hub about</title>
-<meta name="description" content="تعرف على AA Hub، منصة التواصل الاجتماعي السريعة من NebulaSpectra Studio.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://aa-hub.netlify.app/about/">
-<link rel="icon" href="/images/android-icon.png" type="image/png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon.png" />
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="about.css">
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<!doctype html>
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AA Hub",
+        "url": "https://nebulaspectrastudio.netlify.app/app-aa-hub2026112.apk",
+        "applicationCategory": "SocialNetworkingApplication",
+        "operatingSystem": "Web, Android",
+        "downloadUrl": "https://aa-hub.netlify.app/aa-hub.apk",
+        "author": {
+            "@type": "Organization",
+            "name": "NebulaSpectra Studio"
+        }
+    }
+</script>
+        <meta property="og:locale" content="en_US">
+        <meta property="og:locale:alternate" content="ar_SA">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://aa-hub.netlify.app">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AA Hub">
+<meta name="twitter:description" content="A super-fast social networking program. Browse the latest news and posts.">
+<meta name="twitter:image" content="https://aa-hub.netlify.app/images/android-icon.png">
+<meta name="twitter:site" content="@NebulaSpec50618">
+<meta name="twitter:creator" content="@NebulaSpec50618">
+<meta name="instagram:site" content="https://www.instagram.com/nebulaspectrastudio?igsh=Y2ZjZHpwbzF4NXcx">
+<meta name="tiktok:site" content="https://www.tiktok.com/@nebula_spectra_st?_r=1&_t=ZS-94N9AXNYcPi">
+        <meta name="application-name" content="AA Hub">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="violet">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:type" content="application">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="keywords" content="Social, AA Hub, NebulaSpectra Studio, arabic social, fast social, social app, aa hub">
+                <meta name="author" content="NebulaSpectra Studio">
+        <meta name="authorName" content="AA Hub">
+        <meta name="authorUid" content="AA Hub">
+        <meta property="og:site_name" content="AA Hub">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, interactive-widget=resizes-content">
+        <title>AA Hub</title>
+        <meta
+            name="description"
+            content="A super-fast social networking program. Browse the latest news and posts."
+        />
+        <meta property="og:title" content="AA Hub" />
+        <meta property="og:description" content="A super-fast social networking program. Browse the latest news and posts." />
+        <meta property="og:url" content="https://aa-hub.netlify.app">
+    <link rel="icon" href="/images/android-icon.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <link rel="stylesheet" href="/root_files/style.css">
 </head>
-<body>
-<header class="site-header">
-  <a href="/" class="back-btn"><i data-lucide="arrow-right" style="width:18px;height:18px;"></i></a>
-  <span class="hdr-title" id="hdr-title"></span>
+
+    <body class="dark-mode">
+<script src="/firebase/firebase-app.js"></script>
+<script src="/firebase/firebase-auth.js"></script>
+<script src="/firebase/firebase-database.js"></script>
+<script src="/root_files/script.js"></script>
+            <button
+                onclick="toggleLanguage()"
+                class="absolute top-4 right-4 w-10 h-10 bg-purple-600/20 text-purple-400 rounded-full btn-press hover:bg-purple-600/30 flex items-center justify-center z-50"
+            >
+                <i data-lucide="globe" class="w-5 h-5"></i>
+            </button>
+            <div id="login-form" style="width:100%;max-width:360px;background:rgba(19,18,30,0.97);border:1px solid rgba(124,58,237,0.2);border-radius:28px;padding:36px 28px;box-shadow:0 24px 80px rgba(0,0,0,0.6),0 0 60px rgba(124,58,237,0.08);">
+
+                <div style="text-align:center;margin-bottom:28px;">
+
+                    <h1 style="font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,#E5E7EB,#A855F7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;font-family:'Segoe Script',cursive;">AA HUB</h1>
+                    <p style="font-size:0.78rem;color:#6B7280;margin-top:4px;" data-i18n="welback"></p>
+                </div>
+                <input id="em" type="email" data-i18n-placeholder="email" placeholder="البريد الإلكتروني" class="input-style mb-3" style="width:100%;box-sizing:border-box;" />
+                <input id="ps" type="password" data-i18n-placeholder="password" placeholder="كلمة المرور" class="input-style mb-5" style="width:100%;box-sizing:border-box;" />
+                <button
+                    onclick="auth.signInWithEmailAndPassword(document.getElementById('em').value, document.getElementById('ps').value)"
+                    class="btn-press"
+                    style="width:100%;background:linear-gradient(135deg,#7C3AED,#A855F7);color:white;padding:14px;border-radius:14px;font-weight:800;font-size:1rem;font-family:Tajawal,sans-serif;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(124,58,237,0.4);margin-bottom:12px;"
+                    data-i18n="login">دخول</button>
+                <button onclick="nav('forgot-password-screen')"
+                    style="width:100%;background:transparent;border:none;color:#9CA3AF;font-size:0.82rem;font-family:Tajawal,sans-serif;cursor:pointer;padding:8px;margin-bottom:8px;"
+                    data-i18n="forgotPassword">نسيت كلمة المرور؟</button>
+                <div style="height:1px;background:rgba(255,255,255,0.06);margin:8px 0 16px;"></div>
+                <button onclick="nav('signup-screen')"
+                    class="btn-press"
+                    style="width:100%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.25);color:#A855F7;padding:13px;border-radius:14px;font-weight:700;font-family:Tajawal,sans-serif;cursor:pointer;"
+                    data-i18n="createAccount">إنشاء حساب جديد</button>
+            </div>
+            <p style="color:rgba(255,255,255,0.12);font-size:0.7rem;margin-top:20px;text-align:center;">AA Hub © NebulaSpectra Studio</p>
+        </div>
+
+
+        <div id="signup-screen" class="screen hidden flex items-center justify-center p-6 text-center">
+            <div style="width:100%;max-width:360px;background:rgba(19,18,30,0.97);border:1px solid rgba(124,58,237,0.2);border-radius:28px;padding:36px 28px;box-shadow:0 24px 80px rgba(0,0,0,0.6),0 0 60px rgba(124,58,237,0.08);">
+                <div style="text-align:center;margin-bottom:28px;">
+                    <div style="width:56px;height:56px;background:linear-gradient(135deg,#7C3AED,#A855F7);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 8px 24px rgba(124,58,237,0.4);">
+                        <i data-lucide="user-plus" class="w-7 h-7" style="color:white;"></i>
+                    </div>
+                    <h1 style="font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,#E5E7EB,#A855F7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="signup">تسجيل جديد</h1>
+<p style="font-size:0.78rem;color:#6B7280;margin-top:4px;" data-i18n="signupSubtitle">أنشئ حسابك وانضم إلينا</p>
+                </div>
+                <input id="signup-name" type="text" data-i18n-placeholder="username" placeholder="اسم المستخدم" class="input-style mb-3" style="width:100%;box-sizing:border-box;" />
+                <input id="signup-em" type="email" data-i18n-placeholder="email" placeholder="البريد الإلكتروني" class="input-style mb-3" style="width:100%;box-sizing:border-box;" />
+                <input id="signup-ps" type="password" data-i18n-placeholder="password" placeholder="كلمة المرور" class="input-style mb-4" style="width:100%;box-sizing:border-box;" />
+                <div id="signup-error" class="text-red-400 text-xs mb-3 text-right"></div>
+                <button
+                    onclick="signUp()"
+                    class="btn-press"
+                    style="width:100%;background:linear-gradient(135deg,#7C3AED,#A855F7);color:white;padding:14px;border-radius:14px;font-weight:800;font-size:1rem;font-family:Tajawal,sans-serif;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(124,58,237,0.4);margin-bottom:12px;"
+                    data-i18n="signup">تسجيل الآن</button>
+                <div style="height:1px;background:rgba(255,255,255,0.06);margin:4px 0 12px;"></div>
+                <button
+                    onclick="nav('auth-screen')"
+                    class="btn-press"
+                    style="width:100%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.25);color:#A855F7;padding:13px;border-radius:14px;font-weight:700;font-family:Tajawal,sans-serif;cursor:pointer;"
+                    data-i18n="back">العودة للدخول</button>
+            </div>
+        </div>
+
+        <div id="forgot-password-screen" class="screen hidden flex items-center justify-center p-6 text-center">
+    <div class=" p-8 rounded-[40px] w-full max-w-md border border-white/10 shadow-2xl">
+
+        <div class="mb-6 flex justify-center">
+            <div class="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center border border-purple-500/20">
+                <i data-lucide="lock" class="w-8 h-8 text-purple-400"></i>
+            </div>
+        </div>
+
+        <h1 class="text-2xl font-bold mb-3 text-purple-400" data-i18n="forgotPasswordTitle">
+            استعادة كلمة المرور
+        </h1>
+        <p class="text-sm opacity-80 mb-8 leading-relaxed" data-i18n="forgotPasswordMessage">
+    للحصول على مساعدة في استعادة حسابك، يرجى التواصل مع فريق الدعم الفني. سنساعدك في استعادة حسابك خلال 24 ساعة.
+</p>
+
+        <div class="space-y-4">
+            <input
+                id="reset-email"
+                type="email"
+                data-i18n-placeholder="email"
+                placeholder="البريد الإلكتروني"
+                class="input-style w-full py-4 px-5 rounded-2xl bg-white/5 border border-white/10 focus:border-purple-500 outline-none transition-all text-center"
+            >
+
+            <button
+                onclick="handlePasswordReset()"
+                class="w-full bg-purple-600 py-4 rounded-2xl font-bold btn-press hover:bg-purple-700 transition duration-200 shadow-lg shadow-purple-900/20"
+            >
+                <span data-i18n="resetlink">إرسال رابط الاستعادة</span>
+            </button>
+        </div>
+
+        <div class="relative flex py-8 items-center justify-center">
+            <div class="flex-grow border-t border-white/10"></div>
+            <span class="flex-shrink mx-4 text-[10px] text-white/30 tracking-widest uppercase" data-i18n="orDivider">أو</span>
+            <div class="flex-grow border-t border-white/10"></div>
+        </div>
+
+        <div class="space-y-3">
+            <button
+                onclick="window.open('https://nebulaspectrastudio.netlify.app', '_blank')"
+                class="w-full bg-white/5 border border-white/10 py-4 rounded-2xl font-semibold btn-press hover:bg-white/10 transition duration-200 flex items-center justify-center gap-3 text-sm"
+            >
+                <i data-lucide="headphones" class="w-4 h-4 text-cyan-400"></i>
+                <span data-i18n="contactSupport">تواصل مع الدعم الفني</span>
+            </button>
+
+            <button
+                onclick="nav('auth-screen')"
+                class="w-full py-3 text-purple-400/80 hover:text-purple-400 text-sm font-medium transition-colors"
+                data-i18n="backToLogin"
+            >
+                العودة لتسجيل الدخول
+            </button>
+        </div>
+
+    </div>
+</div>
+
+        <div id="main-screen" class="screen hidden pb-16">
+            <header
+    class="p-4 flex justify-between items-center  header-nav rounded-none sticky top-0 z-20 border-b border-white/10"
+>
+    <img
+        class="my-photo w-10 h-10 rounded-full object-cover border-2 border-purple-500 btn-press"
+        onclick="viewProfile()"
+    />
+    <span class="text-purple-500 text-2xl" style="font-family: 'Segoe Script', 'Brush Script MT', 'Lucida Calligraphy', cursive; font-weight: 400; font-style: italic;">
+        <span data-i18n="appName">AA HUB</span>
+    </span>
+    <button
+        onclick="nav('search-screen')"
+        class="text-2xl btn-press p-2 rounded-full hover:bg-white/10 text-purple-400"
+    >
+        <i data-lucide="search" class="w-6 h-6"></i>
+    </button>
 </header>
-<div class="hero">
-  <h1>AA Hub</h1>
-  <p id="hero-p"></p>
+            <div class="flex-grow overflow-y-auto p-4 custom-scroll">
+                <div id="feed-container"></div>
+            </div>
+            
+            <div id="fab-container" class="fixed z-30" style="bottom:76px;left:16px;display:flex;flex-direction:column;align-items:center;gap:12px;">
+                
+                <div id="fab-ai-btn" style="display:none;animation:fabPop 0.2s cubic-bezier(0.34,1.26,0.64,1);">
+                    <button onclick="nav('ai-assistant-screen')" class="btn-press" style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#EC4899);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(236,72,153,0.4);border:none;cursor:pointer;">
+                        <i data-lucide="bot" class="w-5 h-5" style="color:white;"></i>
+                    </button>
+                </div>
+                
+                <div id="fab-post-btn" style="display:none;animation:fabPop 0.15s cubic-bezier(0.34,1.26,0.64,1);">
+                    <button onclick="nav('new-post-screen')" class="btn-press" style="width:46px;height:46px;border-radius:50%;background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.4);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(124,58,237,0.3);cursor:pointer;">
+                        <i data-lucide="pencil" class="w-5 h-5" style="color:#A855F7;"></i>
+                    </button>
+                </div>
+                
+                <button id="fab-main-btn" onclick="toggleFab()" class="btn-press" style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(124,58,237,0.5);border:none;cursor:pointer;transition:transform 0.25s cubic-bezier(0.34,1.26,0.64,1);position:relative;">
+                    <i data-lucide="plus" class="w-6 h-6" style="color:white;"></i>
+                </button>
+            </div>
+            <div
+                id="in-app-notification"
+                onclick="loads()"
+                class="fixed top-2 right-1/2 translate-x-1/2 w-11/12 max-w-sm z-50 bg-purple-700 text-white p-3 rounded-xl shadow-lg text-sm text-center cursor-pointer transition-all duration-500 opacity-0 hidden"
+            ></div>
+            <nav
+                class="fixed bottom-0 left-0 right-0 h-16 rounded-none flex justify-around items-center border-t border-white/10 header-nav z-30"
+            >
+                <button id="home-btn" onclick="goToHome()" class="home-btn btn-press" style="width:44px;height:44px;border-radius:50%;background:rgba(124,58,237,0.15);border:1.5px solid rgba(168,85,247,0.35);display:flex;align-items:center;justify-content:center;color:#A855F7;position:relative;flex-shrink:0;">
+                    <i data-lucide="home" class="home-icon w-5 h-5 fill-purple-500" style="color:#A855F7;"></i>
+                    <svg class="home-spinner w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="3" style="position:absolute;">
+                        <circle cx="12" cy="12" r="10" opacity="0.25" />
+                        <path d="M12 2 A10 10 0 0 1 22 12" stroke-linecap="round" />
+                    </svg>
+                </button>
+                <button onclick="nav('chats-list-screen')" class="text-2xl opacity-60 hover:opacity-100 p-2 btn-press">
+                    <i data-lucide="message-square-text" class="w-6 h-6"></i>
+                </button>
+                <button onclick="nav('communities-screen')" class="text-2xl opacity-60 hover:opacity-100 p-2 btn-press relative">
+                    <i data-lucide="users" class="w-6 h-6"></i>
+                </button>
+                <button onclick="viewProfile()" class="text-2xl opacity-60 hover:opacity-100 p-2 btn-press">
+                    <i data-lucide="user" class="w-6 h-6"></i>
+                </button>
+            </nav>
+        </div>
+
+        <div id="new-post-screen" class="screen hidden" style="background:var(--c-bg);">
+            <header class="header-nav sticky top-0 z-20 flex items-center justify-between" style="padding:12px 16px;">
+                <button onclick="nav('main-screen')" class="btn-press" style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;display:flex;align-items:center;justify-content:center;">
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#E5E7EB,#A855F7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="newPost">منشور جديد</span>
+                <button onclick="publishPost()" class="btn-press" style="background:linear-gradient(135deg,#7C3AED,#A855F7);color:white;padding:9px 18px;border-radius:99px;font-weight:800;font-family:Tajawal,sans-serif;border:none;cursor:pointer;font-size:0.85rem;display:flex;align-items:center;gap:6px;box-shadow:0 4px 16px rgba(124,58,237,0.35);">
+                    <i data-lucide="send" class="w-4 h-4"></i> <span data-i18n="publish">نشر</span>
+                </button>
+            </header>
+            <div style="padding:16px;">
+            <textarea
+                id="post-txt"
+                data-i18n-placeholder="writePost"
+                class="w-full h-40 bg-transparent text-lg outline-none resize-none mb-4 p-4 rounded-xl border border-purple-500/30 focus:border-purple-500 transition input-style"
+            ></textarea>
+            <label
+                class="block p-4  rounded-xl cursor-pointer text-sm mb-4 border border-white/10 hover:border-purple-500/50 transition duration-200 flex items-center justify-center gap-2"
+            >
+                <i data-lucide="image-plus" class="w-5 h-5 text-purple-400"></i> <span data-i18n="addPhoto">إضافة صورة</span>
+                <input type="file" id="post-file" accept="image/*" hidden />
+            </label>
+
+            <div id="post-image-preview" class="hidden mb-4  p-3 rounded-xl border border-purple-500/20 bg-purple-900/10">
+                <div id="post-media-container" class="mb-2"></div>
+                <button onclick="removePostImage()" class="text-red-400 text-sm hover:text-red-300 flex items-center gap-1 btn-press transition">
+                    <i data-lucide="trash-2" class="w-4 h-4 inline"></i> <span data-i18n="removePhoto">إزالة الوسائط</span>
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <div id="search-screen" class="screen hidden" style="display:flex;flex-direction:column;overflow:hidden;background:var(--c-bg);">
+            <header class="header-nav flex items-center gap-3" style="padding:10px 14px;flex-shrink:0;">
+                <button onclick="nav('main-screen')" class="btn-press" style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <input
+                    id="search-input"
+                    type="text"
+                    data-i18n="searchPlaceholder"
+                    placeholder="ابحث في AA HUB..."
+                    class="input-style"
+                    style="flex:1;border-radius:99px;padding:10px 16px;"
+                    oninput="performSearch(this.value)"
+                />
+            </header>
+            <div class="flex gap-2 p-3 overflow-x-auto border-b border-white/10" style="flex-shrink:0; scrollbar-width:none; -ms-overflow-style:none;">
+                <div class="filter-tab active" data-filter="posts" onclick="setSearchFilter('posts')">
+                    <span data-i18n="searchPosts">المنشورات</span>
+                </div>
+                <div class="filter-tab" data-filter="comments" onclick="setSearchFilter('comments')">
+                    <span data-i18n="searchComments">التعليقات</span>
+                </div>
+                <div class="filter-tab" data-filter="latest" onclick="setSearchFilter('latest')">
+                    <span data-i18n="searchLatest">الأحدث</span>
+                </div>
+                <div class="filter-tab" data-filter="users" onclick="setSearchFilter('users')">
+                    <span data-i18n="searchUsers">المستخدمين</span>
+                </div>
+            </div>
+            <div id="search-results" class="p-4 custom-scroll" style="flex:1;overflow-y:auto;min-height:0;">
+                <p class="text-center opacity-60 mt-8 text-lg p-5 " data-i18n="searchPlaceholder">
+                    ابحث في AA HUB...
+                </p>
+            </div>
+        </div>
+
+        <div id="chats-list-screen" class="screen hidden flex flex-col" style="background:var(--c-bg);">
+            <header class="header-nav flex items-center gap-3 sticky top-0 z-20" style="padding:12px 16px;flex-shrink:0;">
+                <div style="width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#7C3AED,#7C3AED);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(124,58,237,0.35);flex-shrink:0;">
+                    <i data-lucide="messages-square" class="w-5 h-5" style="color:white;"></i>
+                </div>
+                <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#E5E7EB,#7C3AED);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="privateChats">المحادثات الخاصة</span>
+            </header>
+            <div style="height:8px;"></div>
+            <div id="chat-list-items" class="flex-1 overflow-y-auto custom-scroll px-4 pb-24"></div>
+            <nav
+                class="h-16  rounded-none flex justify-around items-center absolute bottom-0 left-0 w-full header-nav"
+            >
+                <button onclick="nav('main-screen')" class="text-2xl opacity-60 p-2 btn-press">
+                    <i data-lucide="home" class="w-6 h-6"></i>
+                </button>
+                <button class="text-2xl p-2 btn-press" style="color:#A855F7;">
+    <i data-lucide="message-square" class="w-6 h-6" style="fill:#A855F7;"></i>
+</button>
+                <button
+                    onclick="nav('communities-screen')"
+                    class="text-2xl opacity-60 hover:opacity-100 p-2 btn-press relative"
+                >
+                    <i data-lucide="users" class="w-6 h-6"></i>
+                </button>
+                <button onclick="viewProfile()" class="text-2xl opacity-60 p-2 btn-press">
+                    <i data-lucide="user" class="w-6 h-6"></i>
+                </button>
+            </nav>
+        </div>
+
+        <div id="chat-screen" class="screen hidden" style="background:var(--c-bg);display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;height:100dvh;overflow:hidden;">
+            <header class="header-nav sticky top-0 z-20 flex items-center gap-3" style="padding:12px 16px;flex-shrink:0;">
+                <button onclick="nav('chats-list-screen')" class="btn-press" style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <span id="chat-title" style="font-weight:800;font-size:1rem;color:#E5E7EB;"></span>
+            </header>
+            <div id="chat-box" class="overflow-y-auto p-4 custom-scroll flex flex-col" style="flex:1 1 auto;min-height:0;"></div>
+            <div id="reply-indicator" class="hidden reply-indicator-bar flex items-center justify-between">
+                <div class="flex flex-col flex-1 min-w-0">
+                    <span id="reply-indicator-name" class="text-xs text-purple-400 font-medium"
+                        >↩️ <span data-i18n="replyTo">الرد على</span>:</span
+                    >
+                    <span id="reply-indicator-text" class="text-xs opacity-70 truncate"></span>
+                </div>
+                <button onclick="cancelReply()" class="text-white/70 hover:text-white p-1 rounded-full btn-press ml-2">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <div id="typing-indicator" style="display:none;" class="px-4 py-1">
+                <div class="flex items-center gap-2">
+                    <div class=" px-4 py-3 rounded-2xl flex items-center gap-2 bg-white/5">
+                        <span class="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style="animation-delay:0s"></span>
+                        <span class="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style="animation-delay:0.2s"></span>
+                        <span class="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style="animation-delay:0.4s"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="chat-image-preview" class="hidden px-3 pt-2 pb-1 mx-3 mb-1">
+                <div class=" rounded-2xl border border-purple-500/25 bg-purple-950/30 p-3 flex items-center gap-3">
+
+                    <img id="chat-preview-img" class="w-14 h-14 rounded-xl object-cover hidden flex-shrink-0 border border-white/10">
+
+                    <div id="chat-preview-file-icon" class="hidden w-14 h-14 rounded-xl bg-white/8 flex items-center justify-center flex-shrink-0 border border-white/10">
+                        <i data-lucide="file" class="w-7 h-7 text-purple-400"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div id="chat-preview-filename" class="text-xs font-bold text-purple-300 truncate leading-tight"></div>
+                        <div id="chat-preview-filesize" class="text-[10px] opacity-50 mt-0.5"></div>
+                        <div id="chat-preview-filetype-badge" class="mt-1 inline-block text-[9px] font-bold px-2 py-0.5 rounded-full bg-purple-600/30 text-purple-400 uppercase tracking-wide"></div>
+                    </div>
+                    <button onclick="removeChatFile()" class="flex-shrink-0 w-8 h-8 rounded-full bg-red-500/15 hover:bg-red-500/30 flex items-center justify-center text-red-400 hover:text-red-300 btn-press transition">
+                        <i data-lucide="x" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="chat-input-bar" style="flex-shrink:0;padding:8px 12px;display:flex;gap:8px;align-items:flex-end;border-top:1px solid rgba(255,255,255,0.1);background:rgba(11,11,18,0.98);padding-bottom:max(8px, env(safe-area-inset-bottom));">
+                <textarea
+                    id="chat-inp"
+                    data-i18n-placeholder="writeMessage"
+                    class="flex-1 input-style rounded-xl chat-textarea"
+                    oninput="adjustTextareaHeight(); handleTyping()"
+                    rows="1"
+                ></textarea>
+                <!-- hidden file inputs -->
+                <input type="file" id="chat-file" hidden accept="image/*,audio/*,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.zip,.rar,video/*" />
+                <input type="file" id="chat-file-image" hidden accept="image/*" />
+                <input type="file" id="chat-file-video" hidden accept="video/*" />
+                <input type="file" id="chat-file-doc" hidden accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.zip,.rar" />
+
+                <button onclick="openAttachSheet()" class="p-3 bg-purple-600 rounded-full cursor-pointer btn-press hover:bg-purple-700 flex items-center justify-center w-12 h-12 flex-shrink-0">
+                    <i data-lucide="paperclip" class="w-6 h-6"></i>
+                </button>
+
+                <!-- Attach Bottom Sheet -->
+                <div id="attach-sheet" onclick="closeAttachSheet()" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.5);">
+                    <div onclick="event.stopPropagation()" style="position:absolute;bottom:0;left:0;right:0;background:#13121E;border-radius:20px 20px 0 0;padding:16px 16px 32px;">
+                        <div style="width:40px;height:4px;background:#6B7280;border-radius:2px;margin:0 auto 20px;"></div>
+                        <p style="text-align:center;font-size:0.85rem;color:#9CA3AF;margin-bottom:16px;" data-i18n="attachFile">إرفاق ملف</p>
+                        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+                            <button onclick="triggerAttach('image')" style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 8px;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);border-radius:14px;">
+                                <div style="width:44px;height:44px;background:linear-gradient(135deg,#7C3AED,#A855F7);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+                                    <i data-lucide="image" style="width:22px;height:22px;color:white;"></i>
+                                </div>
+                                <span style="font-size:0.78rem;color:#E5E7EB;" data-i18n="attachImage">صورة</span>
+                            </button>
+                            <button onclick="triggerAttach('video')" style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 8px;background:rgba(236,72,153,0.15);border:1px solid rgba(236,72,153,0.3);border-radius:14px;">
+                                <div style="width:44px;height:44px;background:linear-gradient(135deg,#BE185D,#EC4899);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+                                    <i data-lucide="video" style="width:22px;height:22px;color:white;"></i>
+                                </div>
+                                <span style="font-size:0.78rem;color:#E5E7EB;" data-i18n="attachVideo">فيديو</span>
+                            </button>
+                            <button onclick="triggerAttach('doc')" style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 8px;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);border-radius:14px;">
+                                <div style="width:44px;height:44px;background:linear-gradient(135deg,#1D4ED8,#3B82F6);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+                                    <i data-lucide="file-text" style="width:22px;height:22px;color:white;"></i>
+                                </div>
+                                <span style="font-size:0.78rem;color:#E5E7EB;" data-i18n="attachDoc">ملف</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    onclick="sendChat()"
+                    id="send-chat-btn"
+                    class="bg-purple-600 w-12 h-12 rounded-full flex items-center justify-center text-xl btn-press hover:bg-purple-700 flex-shrink-0"
+                >
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                </button>
+                <button
+                    onclick="cancelEdit()"
+                    id="chat-cancel-edit"
+                    class="hidden bg-red-600/50 w-12 h-12 rounded-full flex items-center justify-center text-xl btn-press hover:bg-red-700/70 flex-shrink-0"
+                >
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="profile-screen" class="screen hidden" style="background:var(--c-bg);">
+            <header class="header-nav sticky top-0 z-20 flex items-center gap-3" style="padding:12px 16px;">
+                <button id="profile-back-btn" class="btn-press" style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <span id="profile-name-display" class="font-bold" style="font-size:1rem;color:#E5E7EB;" data-i18n="profile">الملف الشخصي</span>
+            </header>
+            <div class="flex-grow overflow-y-auto custom-scroll">
+                <div
+                    class=" p-6 rounded-none flex flex-col items-center mb-4 border-b border-purple-500/30 bg-gradient-to-t from-purple-900/10 to-transparent"
+                >
+                    <img
+                        id="profile-photo-display"
+                        class="w-28 h-28 rounded-full object-cover border-4 border-purple-500 mb-4 shadow-xl"
+                    />
+                    <h2 class="text-3xl font-black mb-2 text-purple-300" id="profile-name-display"></h2>
+                    <p class="text-sm opacity-70 mb-4 text-center max-w-sm" id="profile-bio-display"></p>
+                    <div class="flex justify-around w-full max-w-xs mb-4">
+                        <div
+                            id="profile-followers-container"
+                            class="text-center p-3 rounded-xl  btn-press cursor-pointer hover:bg-white/10 transition duration-200 border border-white/5"
+                        >
+                            <div id="profile-followers-count" class="font-bold text-2xl text-purple-400">0</div>
+                            <div class="text-xs opacity-70" data-i18n="followers">المتابعون</div>
+                        </div>
+                        <div
+                            id="profile-following-container"
+                            class="text-center p-3 rounded-xl  btn-press cursor-pointer hover:bg-white/10 transition duration-200 border border-white/5"
+                        >
+                            <div id="profile-following-count" class="font-bold text-2xl text-purple-400">0</div>
+                            <div class="text-xs opacity-70" data-i18n="following">يتابع</div>
+                        </div>
+                    </div>
+                    <div id="profile-action-btn-container"></div>
+                </div>
+                <div id="profile-action-btn-container"></div>
+                <div id="profile-posts-container" class="p-4">
+                    <h4 class="text-xl font-bold mb-4 border-b border-white/10 pb-2 flex items-center gap-2">
+                        <i data-lucide="list-collapse" class="w-6 h-6"></i>
+                        <span data-i18n="userPosts">منشورات المستخدم</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div id="communities-screen" class="screen hidden flex flex-col" style="background:var(--c-bg);">
+            <header class="header-nav sticky top-0 z-20 flex items-center gap-3" style="padding:12px 16px;flex-shrink:0;">
+                <button onclick="nav('main-screen')" class="btn-press" style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <span style="flex:1;font-size:1rem;font-weight:800;background:linear-gradient(135deg,#E5E7EB,#A855F7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="communities">المجتمعات</span>
+                <button onclick="showCreateCommunity()" class="btn-press" style="width:36px;height:36px;border-radius:50%;background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3);color:#A855F7;display:flex;align-items:center;justify-content:center;">
+                    <i data-lucide="plus" class="w-5 h-5"></i>
+                </button>
+            </header>
+
+            <div id="communities-list" class="flex-grow overflow-y-auto custom-scroll p-4">
+                <div class="text-center py-12 opacity-60">
+                    <i data-lucide="users" class="w-16 h-16 mx-auto mb-3 opacity-40"></i>
+                    <p data-i18n="noCommunities">لا توجد مجتمعات بعد</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="create-community-overlay" class="modal-overlay" onclick="closeAllModals()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <header class="p-4 flex items-center justify-between border-b border-white/10 sticky top-0 bg-[color:var(--bg)] rounded-t-[30px]">
+                    <h2 class="font-bold text-lg" data-i18n="createCommunity">إنشاء مجتمع</h2>
+                    <button onclick="closeAllModals()" class="text-2xl btn-press p-2 rounded-full hover:bg-white/10">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </header>
+                <div class="p-6">
+                    <input id="community-name" type="text" data-i18n-placeholder="communityNamePlaceholder" placeholder="اسم المجتمع" class="input-style mb-3" maxlength="50">
+                    <textarea id="community-desc" data-i18n-placeholder="communityDescPlaceholder" placeholder="وصف المجتمع" class="input-style mb-3 h-24 resize-none" maxlength="200"></textarea>
+                    <label class="block p-3  rounded-xl mb-4 cursor-pointer text-sm border border-white/10 hover:border-purple-500/50 transition flex items-center justify-center gap-2">
+                        <i data-lucide="image" class="w-5 h-5"></i>
+                        <span data-i18n="communityImage">صورة المجتمع</span>
+                        <input type="file" id="community-image" hidden accept="image/*">
+                    </label>
+                    <button onclick="createCommunity()" class="w-full bg-purple-600 py-3 rounded-xl font-bold btn-press hover:bg-purple-700">
+                        <span data-i18n="create">إنشاء</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="community-detail-screen" class="screen hidden flex flex-col">
+            <header class="p-4 flex items-center gap-4  rounded-none header-nav sticky top-0 z-20 border-b border-white/10">
+                <button onclick="nav('communities-screen')" class="text-xl btn-press p-2 rounded-full hover:bg-white/10">
+                    <i data-lucide="arrow-right" class="w-6 h-6"></i>
+                </button>
+                <div class="flex-1 min-w-0">
+                    <h1 id="community-name-header" class="font-bold text-lg truncate"></h1>
+                    <p id="community-members-count" class="text-xs opacity-60"></p>
+                </div>
+                <button id="delete-community-btn" class="hidden btn-press p-2 rounded-full hover:bg-red-900/20 text-red-400">
+                    <i data-lucide="trash-2" class="w-5 h-5"></i>
+                </button>
+                <button id="join-community-btn" onclick="toggleCommunityMembership()" class="bg-purple-600 px-4 py-2 rounded-full text-sm font-bold btn-press hover:bg-purple-700 flex-shrink-0">
+                    <span data-i18n="join">انضم</span>
+                </button>
+            </header>
+
+            <div class="relative">
+                <img id="community-banner" class="w-full h-32 object-cover" src="">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <p id="community-description" class="text-sm"></p>
+                </div>
+            </div>
+
+            <div id="community-posts" class="flex-grow overflow-y-auto custom-scroll p-4">
+                <div class="text-center py-12 opacity-60">
+                    <i data-lucide="message-square" class="w-16 h-16 mx-auto mb-3 opacity-40"></i>
+                    <p data-i18n="noCommunityPosts">لا توجد منشورات بعد</p>
+                </div>
+            </div>
+
+            <button id="add-community-post-btn" onclick="showCreateCommunityPost()" class="hidden fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-purple-600 w-14 h-14 rounded-full shadow-2xl btn-press hover:bg-purple-700 z-30">
+                <i data-lucide="plus" class="w-6 h-6 mx-auto"></i>
+            </button>
+        </div>
+
+        <div id="post-detail-screen" class="screen hidden custom-scroll" style="overflow-y:auto;overflow-x:hidden;">
+            <header class="header-nav flex items-center gap-3 sticky top-0 z-20"
+                style="padding:12px 16px;border-bottom:1px solid rgba(124,58,237,0.12);">
+                <button onclick="closePostDetail()" class="btn-press flex items-center justify-center"
+                    style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;">
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#E5E7EB,#A855F7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="post">المنشور</span>
+            </header>
+            <div id="post-detail-content" class="pb-24">
+
+            </div>
+        </div>
+
+        <div id="image-viewer" class="image-viewer-overlay" onclick="closeImageViewer()">
+            <button class="image-viewer-close">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <img id="image-viewer-img" class="image-viewer-content" onclick="event.stopPropagation()">
+        </div>
+
+        <div id="settings-screen" class="screen hidden overflow-y-auto custom-scroll" style="background:var(--c-bg);">
+            <header class="header-nav sticky top-0 z-20 flex items-center gap-3" style="padding:12px 16px;">
+                <button onclick="nav('main-screen')" class="btn-press" style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#E5E7EB,#A855F7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="settings">الإعدادات</span>
+            </header>
+
+            <div style="padding:16px 16px 100px; display:flex; flex-direction:column; gap:12px;">
+
+                
+                <div style="background:rgba(22,21,42,0.9);border:1px solid rgba(124,58,237,0.15);border-radius:20px;overflow:hidden;">
+                    <div style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <span style="font-size:0.72rem;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:0.08em;" data-i18n="account">الحساب</span>
+                    </div>
+                    <button onclick="nav('profile-edit-screen')" class="btn-press" style="width:100%;display:flex;align-items:center;gap:14px;padding:14px 16px;background:transparent;border:none;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div style="width:38px;height:38px;border-radius:12px;background:rgba(124,58,237,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <i data-lucide="user-pen" class="w-5 h-5" style="color:#A855F7;"></i>
+                        </div>
+                        <div style="flex:1;text-align:right;">
+                            <div style="font-size:0.9rem;font-weight:700;color:#E5E7EB;" data-i18n="prof">تعديل الملف الشخصي</div>
+                            <div style="font-size:0.75rem;color:#6B7280;" data-i18n="editProfileDesc">الاسم، الصورة، السيرة الذاتية</div>
+                        </div>
+                        <i data-lucide="chevron-left" class="w-4 h-4" style="color:#6B7280;flex-shrink:0;"></i>
+                    </button>
+                    
+                    <button onclick="nav('language-screen')" class="btn-press" style="width:100%;display:flex;align-items:center;gap:14px;padding:14px 16px;background:transparent;border:none;cursor:pointer;">
+                        <div style="width:38px;height:38px;border-radius:12px;background:rgba(124,58,237,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <i data-lucide="globe" class="w-5 h-5" style="color:#A855F7;"></i>
+                        </div>
+                        <div style="flex:1;text-align:right;">
+                            <div style="font-size:0.9rem;font-weight:700;color:#E5E7EB;" data-i18n="language">اللغة</div>
+                            <div id="current-lang-label" style="font-size:0.75rem;color:#6B7280;"></div>
+                        </div>
+                        <i data-lucide="chevron-left" class="w-4 h-4" style="color:#6B7280;flex-shrink:0;"></i>
+                    </button>
+                </div>
+
+                
+                <div style="background:rgba(22,21,42,0.9);border:1px solid rgba(124,58,237,0.15);border-radius:20px;overflow:hidden;">
+                    <div style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <span style="font-size:0.72rem;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:0.08em;" data-i18n="helpAndSupport">المساعدة والدعم</span>
+                    </div>
+                    
+                    <button onclick="window.open('https://nebulaspectrastudio.netlify.app','_blank')" class="btn-press" style="width:100%;display:flex;align-items:center;gap:14px;padding:14px 16px;background:transparent;border:none;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div style="width:38px;height:38px;border-radius:12px;background:rgba(6,182,212,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <i data-lucide="headphones" class="w-5 h-5" style="color:#22D3EE;"></i>
+                        </div>
+                        <div style="flex:1;text-align:right;">
+                            <div style="font-size:0.9rem;font-weight:700;color:#E5E7EB;" data-i18n="support">الدعم الفني</div>
+                            <div style="font-size:0.75rem;color:#6B7280;" data-i18n="supportDesc">تواصل مع فريق الدعم</div>
+                        </div>
+                        <i data-lucide="external-link" class="w-4 h-4" style="color:#6B7280;flex-shrink:0;"></i>
+                    </button>
+                    
+                    <button onclick="window.open('https://aa-hub.netlify.app/about/')" class="btn-press" style="width:100%;display:flex;align-items:center;gap:14px;padding:14px 16px;background:transparent;border:none;cursor:pointer;">
+                        <div style="width:38px;height:38px;border-radius:12px;background:rgba(124,58,237,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0; font-size:0.85rem;font-weight:900;color:#A855F7;font-style:italic;font-family:'Segoe Script',cursive;">
+                            AA
+                        </div>
+                        <div style="flex:1;text-align:right;">
+                            <div style="font-size:0.9rem;font-weight:700;color:#E5E7EB;" data-i18n="aboutApp">عن AA Hub</div>
+                            <div style="font-size:0.75rem;color:#6B7280;" data-i18n="aboutAppDesc">الإصدار، فريق العمل، معلومات التطبيق</div>
+                        </div>
+                        <i data-lucide="chevron-left" class="w-4 h-4" style="color:#6B7280;flex-shrink:0;"></i>
+                    </button>
+                </div>
+
+                
+                <button onclick="logout()" class="btn-press" style="width:100%;padding:14px;color:rgba(248,113,113,0.9);background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.18);border-radius:14px;font-family:Tajawal,sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+                    <i data-lucide="log-out" class="w-5 h-5"></i>
+                    <span data-i18n="logout">تسجيل الخروج</span>
+                </button>
+
+            </div>
+        </div>
+
+        
+        <div id="profile-edit-screen" class="screen hidden overflow-y-auto custom-scroll" style="background:var(--c-bg);">
+            <header class="header-nav sticky top-0 z-20 flex items-center gap-3" style="padding:12px 16px;">
+                <button onclick="nav('settings-screen')" class="btn-press" style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#E5E7EB,#A855F7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="prof">تعديل الملف الشخصي</span>
+            </header>
+            <div style="padding:20px 16px 100px;">
+                <div style="background:rgba(22,21,42,0.9);border:1px solid rgba(124,58,237,0.15);border-radius:24px;padding:24px;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.4);">
+                    <img class="my-photo w-24 h-24 rounded-full mx-auto mb-4 border-4 border-purple-500 object-cover" />
+                    <h2 class="my-name font-bold text-xl mb-5 text-purple-300"></h2>
+                    <input id="new-name" type="text" data-i18n-placeholder="username" placeholder="اسم المستخدم" class="input-style mb-3" />
+                    <textarea id="new-bio" data-i18n-placeholder="bio" placeholder="السيرة الذاتية" class="input-style mb-4 h-20 resize-none"></textarea>
+                    <label class="block p-3 rounded-xl mb-5 cursor-pointer text-sm border border-white/10 hover:border-purple-500/50 transition flex items-center justify-center gap-2">
+                        <i data-lucide="camera" class="w-5 h-5"></i>
+                        <span data-i18n="changePhoto">تغيير الصورة</span>
+                        <input type="file" id="new-photo" hidden accept="image/*" />
+                    </label>
+                    <button onclick="updateProfile()" class="w-full bg-purple-600 py-3 rounded-xl font-bold btn-press hover:bg-purple-700" data-i18n="saveChanges">حفظ التغييرات</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="language-screen" class="screen hidden overflow-y-auto custom-scroll" style="background:var(--c-bg);">
+            <header class="header-nav sticky top-0 z-20 flex items-center gap-3" style="padding:12px 16px;">
+                <button onclick="nav('settings-screen')" class="btn-press" style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#E5E7EB,#A855F7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="language">اللغة</span>
+            </header>
+            <div style="padding:20px 16px 100px;">
+                <div style="background:rgba(22,21,42,0.9);border:1px solid rgba(124,58,237,0.15);border-radius:20px;overflow:hidden;margin-bottom:20px;">
+                    <div style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <span style="font-size:0.72rem;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:0.08em;" data-i18n="chooseLanguage">اختر اللغة</span>
+                    </div>
+                    
+                    <button id="lang-ar-btn" onclick="selectLanguage('ar')" class="btn-press" style="width:100%;display:flex;align-items:center;gap:14px;padding:16px;background:transparent;border:none;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.05);direction:ltr;">
+                        <div style="width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,rgba(124,58,237,0.25),rgba(168,85,247,0.15));border:1px solid rgba(124,58,237,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <span style="font-size:0.78rem;font-weight:900;color:#A855F7;font-family:Tajawal,sans-serif;">ع</span>
+                        </div>
+                        <div style="flex:1;text-align:right;">
+                            <div style="font-size:0.9rem;font-weight:700;color:#E5E7EB;">العربية</div>
+                            <div style="font-size:0.75rem;color:#6B7280;">Arabic</div>
+                        </div>
+                        <i id="lang-ar-check" data-lucide="check-circle" class="w-5 h-5" style="color:#A855F7;flex-shrink:0;display:none;"></i>
+                    </button>
+                    <button id="lang-en-btn" onclick="selectLanguage('en')" class="btn-press" style="width:100%;display:flex;align-items:center;gap:14px;padding:16px;background:transparent;border:none;cursor:pointer;direction:ltr;">
+                        <div style="width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,rgba(124,58,237,0.25),rgba(168,85,247,0.15));border:1px solid rgba(124,58,237,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <span style="font-size:0.78rem;font-weight:900;color:#A855F7;font-family:Georgia,serif;letter-spacing:-0.5px;">EN</span>
+                        </div>
+                        <div style="flex:1;text-align:right;">
+                            <div style="font-size:0.9rem;font-weight:700;color:#E5E7EB;">English</div>
+                            <div style="font-size:0.75rem;color:#6B7280;">الإنجليزية</div>
+                        </div>
+                        <i id="lang-en-check" data-lucide="check-circle" class="w-5 h-5" style="color:#A855F7;flex-shrink:0;display:none;"></i>
+                    </button>
+                </div>
+                <button id="save-lang-btn" onclick="saveLanguage()" class="w-full bg-purple-600 py-3 rounded-xl font-bold btn-press hover:bg-purple-700" style="font-family:Tajawal,sans-serif;" data-i18n="saveChanges">حفظ التغييرات</button>
+            </div>
+        </div>
+
+        <div id="comments-overlay" class="modal-overlay" onclick="closeAllModals()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <header
+                    class="p-4 flex items-center justify-between border-b border-white/10 sticky top-0 bg-[color:var(--bg)] rounded-t-[30px] z-10"
+                >
+                    <h2 class="font-bold text-lg" data-i18n="commentsAndReplies">التعليقات</h2>
+                    <button onclick="closeAllModals()" class="text-2xl btn-press p-2 rounded-full hover:bg-white/10">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </header>
+                <div id="com-list" class="flex-grow p-4 overflow-y-auto custom-scroll"></div>
+                <div
+                    id="comment-reply-indicator"
+                    class="hidden flex items-center justify-between mx-3 my-1"
+                    style="background:linear-gradient(135deg,rgba(124,58,237,0.18),rgba(168,85,247,0.08));border:1px solid rgba(124,58,237,0.3);border-radius:14px;padding:10px 14px;gap:10px;border-right:3px solid #A855F7;"
+                >
+                    <div style="width:30px;height:30px;border-radius:10px;background:rgba(124,58,237,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                        <i data-lucide="corner-down-left" class="w-4 h-4" style="color:#A855F7;"></i>
+                    </div>
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <span class="text-xs font-bold" style="color:#A855F7;" data-i18n="replyTo">الرد على</span>
+                        <span id="comment-reply-to-name" class="text-xs truncate" style="color:#D1D5DB;margin-top:1px;"></span>
+                    </div>
+                    <button
+                        onclick="cancelCommentReply()"
+                        class="btn-press"
+                        style="width:26px;height:26px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"
+                    >
+                        <i data-lucide="x" class="w-3 h-3" style="color:#9CA3AF;"></i>
+                    </button>
+                </div>
+                <div class="p-3 flex gap-2 border-t border-white/10 sticky bottom-0 bg-[color:var(--bg)]">
+                    <input
+                        id="com-inp"
+                        type="text"
+                        data-i18n-placeholder="addComment"
+                        placeholder="أضف تعليقًا..."
+                        class="flex-1 input-style rounded-full"
+                    />
+                    <button
+                        id="send-comment-btn"
+                        onclick="sendComment()"
+                        class="bg-purple-600 w-12 h-12 rounded-full font-bold btn-press hover:bg-purple-700 text-xl flex items-center justify-center"
+                    >
+                        <i data-lucide="corner-up-left" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="follow-list-overlay" class="modal-overlay" onclick="closeAllModals()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <header
+                    class="p-4 flex items-center justify-between border-b border-white/10 sticky top-0 bg-[color:var(--bg)] rounded-t-[30px] z-10"
+                >
+                    <h2 class="font-bold text-lg" id="follow-list-title"></h2>
+                    <button onclick="closeAllModals()" class="text-2xl btn-press p-2 rounded-full hover:bg-white/10">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </header>
+                <div id="follow-list-container" class="flex-grow p-4 overflow-y-auto custom-scroll"></div>
+            </div>
+        </div>
+        <div id="ai-assistant-screen" class="screen hidden flex flex-col">
+    <header class="header-nav sticky top-0 z-20 flex items-center gap-3" style="padding:12px 16px;flex-shrink:0;">
+        <button onclick="nav('main-screen')" class="btn-press" style="width:38px;height:38px;border-radius:50%;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:#A855F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </button>
+        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7C3AED,#EC4899);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(124,58,237,0.4);flex-shrink:0;">
+            <i data-lucide="bot" class="w-5 h-5" style="color:white;"></i>
+        </div>
+        <div>
+            <div style="font-weight:800;font-size:0.95rem;color:#E5E7EB;" data-i18n="aiAssistant">المساعد الذكي</div>
+            <div style="font-size:0.72rem;color:#6B7280;" data-i18n="aiSubtitle">مساعدك الذكي المتطور</div>
+        </div>
+    </header>
+
+    <div id="ai-chat-box" class="flex-grow overflow-y-auto p-4 custom-scroll flex flex-col gap-3">
+        <div class="flex justify-start">
+            <div style="max-width:85%;background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(236,72,153,0.08));border:1px solid rgba(124,58,237,0.25);border-radius:20px;border-top-right-radius:4px;padding:16px;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+                    <div style="width:28px;height:28px;background:linear-gradient(135deg,#7C3AED,#EC4899);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                        <i data-lucide="bot" class="w-4 h-4" style="color:white;"></i>
+                    </div>
+                    <span style="font-size:0.78rem;font-weight:800;background:linear-gradient(135deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">NebulaSpectra AI</span>
+                </div>
+                <p style="font-size:0.875rem;color:#E5E7EB;line-height:1.6;">
+                    <span data-i18n="aiWelcomeMsg">مرحباً! أنا</span>
+                    <strong style="color:#A855F7;" data-i18n="aiWelcomeName"> NebulaSpectra AI</strong><span data-i18n="aiWelcomeText">، مساعدك الذكي. يمكنني مساعدتك في:</span>
+                </p>
+                <div style="margin-top:12px;display:flex;flex-direction:column;gap:6px;">
+                    <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(124,58,237,0.1);border-radius:10px;border:1px solid rgba(124,58,237,0.15);">
+                        <i data-lucide="user-pen" class="w-3.5 h-3.5" style="color:#A855F7;flex-shrink:0;"></i>
+                        <span style="font-size:0.78rem;color:#D1D5DB;" data-i18n="aiFeature1">تغيير اسمك وصورتك والبايو</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(124,58,237,0.1);border-radius:10px;border:1px solid rgba(124,58,237,0.15);">
+                        <i data-lucide="send" class="w-3.5 h-3.5" style="color:#A855F7;flex-shrink:0;"></i>
+                        <span style="font-size:0.78rem;color:#D1D5DB;" data-i18n="aiFeature2">إرسال رسائل للمستخدمين</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(124,58,237,0.1);border-radius:10px;border:1px solid rgba(124,58,237,0.15);">
+                        <i data-lucide="file-pen" class="w-3.5 h-3.5" style="color:#A855F7;flex-shrink:0;"></i>
+                        <span style="font-size:0.78rem;color:#D1D5DB;" data-i18n="aiFeature3">نشر منشورات</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(124,58,237,0.1);border-radius:10px;border:1px solid rgba(124,58,237,0.15);">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5" style="color:#A855F7;flex-shrink:0;"></i>
+                        <span style="font-size:0.78rem;color:#D1D5DB;" data-i18n="aiFeature4">الإجابة على أسئلتك</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ai-input-bar" style="flex-shrink:0;padding:8px 12px;display:flex;gap:8px;align-items:flex-end;border-top:1px solid rgba(255,255,255,0.1);background:rgba(11,11,18,0.98);padding-bottom:max(8px, env(safe-area-inset-bottom));">
+        <textarea
+            id="ai-input"
+            data-i18n-placeholder="aiPlaceholder"
+            class="flex-1 input-style rounded-xl chat-textarea"
+            oninput="this.style.height='auto'; this.style.height=this.scrollHeight+'px'"
+            rows="1"
+        ></textarea>
+        <button
+            onclick="sendToAI()"
+            class="bg-gradient-to-r from-purple-600 to-pink-600 w-12 h-12 rounded-full flex items-center justify-center btn-press hover:from-purple-700 hover:to-pink-700 flex-shrink-0"
+        >
+            <i data-lucide="send" class="w-5 h-5"></i>
+        </button>
+    </div>
 </div>
-<div class="content">
-  <div class="stats-grid">
-    <div class="stat-card"><div class="stat-num">30+</div><div class="stat-lbl" id="stat-users"></div></div>
-    <div class="stat-card"><div class="stat-num">10+</div><div class="stat-lbl" id="stat-posts"></div></div>
-    <div class="stat-card"><div class="stat-num">2025</div><div class="stat-lbl" id="stat-founded"></div></div>
-  </div>
-  <div class="page-card">
-    <div class="card-icon"><i data-lucide="sparkles" style="width:22px;height:22px;"></i></div>
-    <div class="card-title" id="what-title"></div>
-    <div class="card-text" id="what-text"></div>
-  </div>
-  <div class="page-card">
-    <div class="card-icon"><i data-lucide="target" style="width:22px;height:22px;"></i></div>
-    <div class="card-title" id="mission-title"></div>
-    <div class="card-text" id="mission-text"></div>
-  </div>
-  <div class="page-card">
-    <div class="card-icon"><i data-lucide="heart" style="width:22px;height:22px;"></i></div>
-    <div class="card-title" id="values-title"></div>
-    <div class="card-text" id="values-text"></div>
-  </div>
-</div>
-<footer class="pg-footer">AA Hub © 2026 NebulaSpectra Studio · <a href="/privacy" id="footer-privacy"></a> · <a href="/terms" id="footer-terms"></a></footer>
-<script src="about.js" defer></script>
+
+        <div id="msg-options-modal" class="msg-options-modal" onclick="closeAllModals()">
+            <div
+                id="msg-options-menu"
+                class="glass-card p-4 rounded-2xl w-11/12 max-w-xs flex flex-col items-start gap-1"
+                onclick="event.stopPropagation()"
+            ></div>
+        </div>
+    <script src="root_files/script.js"></script>
+    <style>
+    @keyframes fabPop {
+        from { opacity:0; transform: scale(0.5) translateY(10px); }
+        to   { opacity:1; transform: scale(1) translateY(0); }
+    }
+    </style>
+    <script>
+    let fabOpen = false;
+    function toggleFab() {
+        fabOpen = !fabOpen;
+        const ai = document.getElementById('fab-ai-btn');
+        const post = document.getElementById('fab-post-btn');
+        const btn = document.getElementById('fab-main-btn');
+        if (fabOpen) {
+            post.style.display = 'block';
+            setTimeout(() => { ai.style.display = 'block'; }, 60);
+            btn.style.transform = 'rotate(45deg)';
+            setTimeout(() => document.addEventListener('click', closeFabOutside), 50);
+        } else {
+            ai.style.display = 'none';
+            post.style.display = 'none';
+            btn.style.transform = 'rotate(0deg)';
+            document.removeEventListener('click', closeFabOutside);
+        }
+        if (window.lucide) lucide.createIcons();
+    }
+    function closeFabOutside(e) {
+        if (!document.getElementById('fab-container').contains(e.target)) {
+            fabOpen = false;
+            document.getElementById('fab-ai-btn').style.display = 'none';
+            document.getElementById('fab-post-btn').style.display = 'none';
+            document.getElementById('fab-main-btn').style.transform = 'rotate(0deg)';
+            document.removeEventListener('click', closeFabOutside);
+        }
+    }
+    </script>
+    <footer style="display:none;">
+    <a href="/about/">من نحن</a>
+    <a href="/contact/">تواصل</a>
+    <a href="/privacy/">الخصوصية</a>
+    <a href="/terms/">الشروط</a>
+    <a href="/support/">الدعم</a>
+</footer>
 </body>
 </html>
